@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Recommendation</title>
+</head>
+<body>
+    <h1 class="text-center">Movie Recommendation</h1>
+    <div class="container w-screen h-auto justify-start my-3 flex  flex-col gap-2 ">
+
+
+     
+       <div class="seach flex justify-center">
+        <input class="w-56 p-3 border-2 border- border-black rounded-lg" placeholder="Search here" type="text" name="" id="movie-search">
+        <button type="submit" class="btn bg-blue-600 p-3 rounded-lg text-xl">Search</button>
+       </div>
+    
+
+        <div class="all-movie-name w-10/12 h-auto mx-auto p-5 font-bold flex flex-wrap justify-center">
+
+            <div class="loader-container hidden text-center mt-6">
+                <div class="loader border-t-8 border-blue-500 border-solid rounded-full w-16 h-16 animate-spin"></div>
+            </div>
+        </div>
+        
+    </div>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>

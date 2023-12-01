@@ -1,0 +1,53 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Poppins:wght@600&display=swap');
+@viewport {
+    width: device-width;
+    height: device-height;
+    viewport-fit: cover;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: poppins;
+    background: rgb(238,174,202);
+    background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
+  
+}
+.movie {
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 19px;
+    margin-top: 9px;
+    background: rgba(13, 12, 12, 0.486);
+    backdrop-filter: blur(3px);
+}
+
+
+.movie h2 {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px; /* Set a specific width */
+    font-size: larger;
+}
+
+.movie img{
+    width: 100px;
+    /* aspect-ratio: 1; */
+}
+
+
+

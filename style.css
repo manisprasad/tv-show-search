@@ -15,39 +15,219 @@
 
 body{
     font-family: poppins;
-    background: rgb(238,174,202);
+    color: white;
+    background-color: black;
+    /* background: rgb(238,174,202);
     background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1); */
   
 }
+
+
+
 .movie {
+    background: white;
+    margin-bottom: 5px;
+  /* padding: 10px; */
+    /* flex-wrap: wrap; */
+    display: flex;
+    gap: 22px;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    /* flex-direction: column; */
+    position: relative;
     border: 2px solid black;
+    box-shadow: 2px -2px 3px white;
+    backdrop-filter: blur(3px) saturate(180%);
+    -webkit-backdrop-filter: blur(3px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: white;
+   
+}
+.movie img{
+    border-radius: 12px;
+    border: 0.2px solid white;
+    box-shadow: 2px 2px 3xp black;
+    /* color: black; */
+    height: 200px;
+    /* padding: 5px; */
+    margin-left: 2px;
+    /* flex: 1; */
+}
+
+.card {
+  /* From https://css.glass */
+background: rgba(52, 113, 143, 0.576);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(113, 111, 111, 0.1);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(7px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.movie-details{
+   
+    /* color: white; */
+   width: 100%;
+    /* justify-content: center; */
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    /* bottom: 1px; */
+    color: rgba(67, 156, 49, 0.688);
+    position: relative;
+}
+
+.movie-details button{
+    color: rgba(255, 255, 255, 0.477);
+    width: max-content;
+    border-radius: 12px;
+    padding: 5px;
+    border: 2px solid black;
+    font-weight: lighter;
+    background: rgba(21, 123, 173, 0.597);
+}
+
+.more-info-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    width: max-content;
+    height: max-content;
+    border: 2px solid white;
+    
+}
+
+.more-details-info-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.movie-div {
+    font-size: 1.6rem;
+
+    /* border: 2px solid black; */
+    color: rgba(255, 255, 255, 0.963);
+}
+
+
+.rating-div {
+    /* border: 2px solid red; */
+    /* text-align: end; */
+   
+    position: relative;
+    /* font-size: 12px; */
+}
+.title-div{
+    padding: 5px;
+    border-radius: 9px;
+    background: black;
+
+    font-size: 28px;
+    color: violet;
+    font-weight: bolder;
+}
+
+
+
+
+
+.moreinfo-popup{
+    height: fit-content;
+    max-height: 85%;
+    scale: 0;
+    position: relative;
+    transition-duration: 0.2s;
+}
+.summary-div{
+    width: 100%;
+    text-align: center;
+}
+.summary-div::first-line{
+    text-align: center;
+    width: 100%;
+    font-size: larger;
+    color: purple;
+}
+
+.cancel{
+
+    scale: 0;
+    transition-duration: 0.2s;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-right: 19px;
-    margin-top: 9px;
-    background: rgba(13, 12, 12, 0.486);
-    backdrop-filter: blur(3px);
+    position: fixed;
+    bottom: 0px;
+
+    border: 2px solid red;
+    /* transform: translateX(-50%); */
+
+}
+
+.cancel-button {
+    width: 80%;
+    height: 60px;
+   position: fixed;
+   bottom: 1px;
+
+
+    border-radius: 19px;
+   
+    font-family: 'Poppins', sans-serif; 
+    padding: 5px 10px;
+    font-size: 25px;
+    color: red;
+    background-color: #fff; /* Set background color */
+    cursor: pointer; /* Add cursor pointer */
+    outline: none; /* Remove button outline */
+}
+
+.cancel-button:hover {
+    background-color: #f8f8f8; /* Change background color on hover */
+    color: darkred; /* Change text color on hover */
 }
 
 
-.movie h2 {
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 200px; /* Set a specific width */
-    font-size: larger;
+
+/* Scrollbar Track */
+::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
 }
 
-.movie img{
-    width: 100px;
-    /* aspect-ratio: 1; */
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change color on hover */
 }
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Set the color of the scrollbar handle */
+    border-radius: 6px; /* Set the border-radius of the scrollbar handle */
+}
 
+/* Button (arrows at the top and bottom of the scrollbar) */
+::-webkit-scrollbar-button {
+    display: none; /* Hide the scrollbar buttons */
+}
 
+/* Track (the area behind the handle) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Set the color of the scrollbar track */
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+    background: transparent; /* Set the color of the scrollbar corner */
+}

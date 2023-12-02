@@ -4,30 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Movie Recommendation</title>
 </head>
 <body>
-    <h1 class="text-center">Movie Recommendation</h1>
-    <div class="container w-screen h-auto justify-start my-3 flex  flex-col gap-2 ">
+    <h1 class="text-center text-white m-auto mt-4">Movie Recommendation</h1>
+    <div class="container max-w-max h-auto justify-center items-center my-3 flex  flex-col gap-2 ">
 
 
      
-       <div class="seach flex justify-center">
-        <input class="w-56 p-3 border-2 border- border-black rounded-lg" placeholder="Search here" type="text" name="" id="movie-search">
-        <button type="submit" class="btn bg-blue-600 p-3 rounded-lg text-xl">Search</button>
+       <div class="seach flex justify-center  relative">
+        <input class="w-10/12 p-3 border-2 text-black border- border-black rounded-lg" placeholder="Search for tv show" type="text" name="" id="movie-search">
+        <button type="submit" class="btn  p-3 absolute right-7 text-2xl text-black "><i class="fa fa-search"></i></button>
        </div>
     
 
-        <div class="all-movie-name w-10/12 h-auto mx-auto p-5 font-bold flex flex-wrap justify-center">
+        <div class="all-movie-name w-screen overflow-hidden h-auto mx-auto p-5 font-bold flex flex-col gap-2 justify-center">
 
-            <div class="loader-container hidden text-center mt-6">
-                <div class="loader border-t-8 border-blue-500 border-solid rounded-full w-16 h-16 animate-spin"></div>
-            </div>
+           
+        </div>
+
+        <div class="loader-container hidden text-center mt-6 ">
+            <div class="loader border-t-8 border-blue-500 border-solid rounded-full w-16 h-16 animate-spin"></div>
         </div>
         
     </div>
+
+    <div class="moreinfo-popup card w-10/12  overflow-y-auto text-black p-4 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" >
+        <!-- Content goes here -->
+    </div>
+    <div class="cancel">
+        
+    </div>
+    
 
    
     <script src="script.js"></script>
